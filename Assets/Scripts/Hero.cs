@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Hero : MonoBehaviour
@@ -16,7 +14,7 @@ public class Hero : MonoBehaviour
     private void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+        body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
         
         //Flip player when moving left-right
         if (horizontalInput >  0.01)
